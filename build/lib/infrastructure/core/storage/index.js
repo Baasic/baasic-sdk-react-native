@@ -1,7 +1,5 @@
 "use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(require("./inMemoryStorageHandler"));
-__export(require("./storageHandler"));
+var tslib_1 = require("tslib");
+tslib_1.__exportStar(require("./inMemoryStorageHandler"), exports);
+tslib_1.__exportStar(require("./storageHandler"), exports);

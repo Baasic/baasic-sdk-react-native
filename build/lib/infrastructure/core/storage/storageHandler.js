@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_native_1 = require("react-native");
-var NativeStorageHandler = (function () {
+var NativeStorageHandler = /** @class */ (function () {
     function NativeStorageHandler(inMemoryStorage) {
         this.inMemoryStorage = inMemoryStorage;
         react_native_1.AsyncStorage.getAllKeys(function (err, keys) {
@@ -59,7 +59,7 @@ var NativeStorageHandler = (function () {
     return NativeStorageHandler;
 }());
 exports.NativeStorageHandler = NativeStorageHandler;
-var KeyValueItem = (function () {
+var KeyValueItem = /** @class */ (function () {
     function KeyValueItem(key, data) {
         this.key = key;
         this.data = data;

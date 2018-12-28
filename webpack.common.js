@@ -15,9 +15,7 @@ module.exports = {
      * Entry point to the application, webpack will bundle all imported modules.
      */
     entry: {
-        'app': [
-            './src/index.ts'
-        ]
+        app: './src/index.ts'
     },
     /**
      * Rule for which files should be transpiled via typescript loader.
@@ -54,17 +52,17 @@ module.exports = {
      * Specify output as an UMD library.
      */
     output: {
-        path: 'build/dist',
+        path: path.resolve('build/dist'),
         filename: 'baasic-sdk-react-native.js',
         library: 'baasicSdkReactNative',
         libraryTarget: 'umd'
     },
     externals: {
-        'baasic-sdk-reactjs': {
-            root: ['baasicSdkreactjs'],
-            commonjs: 'baasic-sdk-reactjs',
-            commonjs2: 'baasic-sdk-reactjs',
-            amd: 'baasic-sdk-reactjs'
+        'baasic-sdk-javascript': {
+            root: ['baasicSdkJavaScript'],
+            commonjs: 'baasic-sdk-javascript',
+            commonjs2: 'baasic-sdk-javascript',
+            amd: 'baasic-sdk-javascript'
         }
     }
-}
+};

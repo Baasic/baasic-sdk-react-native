@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
 var baasic_sdk_reactjs_1 = require("baasic-sdk-reactjs");
 var storage_1 = require("./infrastructure/core/storage");
-var storage_2 = require("infrastructure/core/storage");
+var storage_2 = require("./infrastructure/core/storage");
 var BaasicApp = /** @class */ (function (_super) {
     tslib_1.__extends(BaasicApp, _super);
     function BaasicApp(apiKey, options) {

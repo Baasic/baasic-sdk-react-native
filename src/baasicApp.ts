@@ -1,7 +1,7 @@
 import { BaasicApp as BaasicSdkApp, BaasicPlatform as BaasicSdkPlatform } from 'baasic-sdk-reactjs';
 import { IBaasicOptions,  } from 'baasic-sdk-javascript';
 import { NativeStorageHandler } from './infrastructure/core/storage';
-import { InMemoryStorageHandler } from 'infrastructure/core/storage';
+import { InMemoryStorageHandler } from './infrastructure/core/storage';
 
 class BaasicApp extends BaasicSdkApp {
     constructor(apiKey: string, options?: Partial<IBaasicOptions>) {

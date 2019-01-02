@@ -13,7 +13,7 @@ class NativeStorageHandler implements IStorageHandler, IDefaultStorageConfig {
                                         let key = store[i][0];
                                         let value = store[i][1];
                                         debugger;
-                                        inMemoryStorage[key] = value;
+                                        this.inMemoryStorage.set(key,value);
                                 });
                         });
                 });

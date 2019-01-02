@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var react_native_1 = require("react-native");
 var NativeStorageHandler = /** @class */ (function () {
     function NativeStorageHandler(inMemoryStorage) {
+        var _this = this;
         this.inMemoryStorage = inMemoryStorage;
         react_native_1.AsyncStorage.getAllKeys(function (err, keys) {
             react_native_1.AsyncStorage.multiGet(keys, function (err, stores) {
@@ -11,7 +12,7 @@ var NativeStorageHandler = /** @class */ (function () {
                     var key = store[i][0];
                     var value = store[i][1];
                     debugger;
-                    inMemoryStorage[key] = value;
+                    _this.inMemoryStorage.set(key, value);
                 });
             });
         });

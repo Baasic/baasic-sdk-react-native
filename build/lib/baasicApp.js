@@ -37,9 +37,11 @@ var BaasicEventHandler = /** @class */ (function () {
     };
     BaasicEventHandler.prototype.triggerEvent = function (eventName, data) {
         var event = this.events[eventName];
+        debugger;
         event.trigger(data);
     };
     BaasicEventHandler.prototype.addEvent = function (eventName, func) {
+        debugger;
         var event = this.events[eventName] || new Event(eventName);
         event.registerCallback(func);
     };

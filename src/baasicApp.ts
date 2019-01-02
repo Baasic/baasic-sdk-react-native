@@ -1,5 +1,5 @@
 import { BaasicApp as BaasicSdkApp, BaasicPlatform as BaasicSdkPlatform } from 'baasic-sdk-reactjs';
-import { IBaasicOptions,  } from 'baasic-sdk-javascript';
+import { IBaasicOptions, IEventHandler } from 'baasic-sdk-javascript';
 import { NativeStorageHandler } from './infrastructure/core/storage';
 import { InMemoryStorageHandler } from './infrastructure/core/storage';
 
@@ -29,7 +29,7 @@ export {
     BaasicPlatform
 }
 
-class BaasicEventHandler {
+class BaasicEventHandler implements IEventHandler {
         events = {};
     
         pushMessage(message, args) {
@@ -38,10 +38,12 @@ class BaasicEventHandler {
     
         triggerEvent(eventName, data) {
             const event = this.events[eventName];
+            debugger;
             event.trigger(data);
         }
     
         addEvent(eventName, func) {
+                debugger;
             const event = this.events[eventName] || new Event(eventName);
             event.registerCallback(func);
         }

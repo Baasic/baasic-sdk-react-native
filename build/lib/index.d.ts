@@ -1,3 +1,4 @@
 import 'reflect-metadata';
 export * from './baasicApp';
-export * from './infrastructure/core/storage/index';
+export * from './infrastructure/storage/index';
+export * from './infrastructure/event/index';

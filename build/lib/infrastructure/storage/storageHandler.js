@@ -11,7 +11,6 @@ var NativeStorageHandler = /** @class */ (function () {
                     // get at each store's key/value so you can work with it
                     var key = store[i][0];
                     var value = store[i][1];
-                    debugger;
                     _this.inMemoryStorage.set(key, value);
                 });
             });

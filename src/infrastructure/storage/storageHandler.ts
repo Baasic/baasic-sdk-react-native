@@ -1,6 +1,6 @@
 import { IStorageHandler, IDefaultStorageConfig } from 'baasic-sdk-javascript';
 import { AsyncStorage } from 'react-native';
-import { InMemoryStorageHandler } from 'infrastructure/core/storage';
+import { InMemoryStorageHandler } from 'infrastructure/storage';
 
 class NativeStorageHandler implements IStorageHandler, IDefaultStorageConfig {
         constructor(
@@ -12,7 +12,6 @@ class NativeStorageHandler implements IStorageHandler, IDefaultStorageConfig {
                                         // get at each store's key/value so you can work with it
                                         let key = store[i][0];
                                         let value = store[i][1];
-                                        debugger;
                                         this.inMemoryStorage.set(key,value);
                                 });
                         });

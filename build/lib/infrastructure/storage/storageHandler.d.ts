@@ -1,5 +1,5 @@
 import { IStorageHandler, IDefaultStorageConfig } from 'baasic-sdk-javascript';
-import { InMemoryStorageHandler } from 'infrastructure/core/storage';
+import { InMemoryStorageHandler } from 'infrastructure/storage';
 declare class NativeStorageHandler implements IStorageHandler, IDefaultStorageConfig {
     private inMemoryStorage;
     constructor(inMemoryStorage: InMemoryStorageHandler);

@@ -17,7 +17,11 @@ class BaasicEventHandler implements IEventHandler {
     }
 
     addEvent(eventName, func) {
-        const event = this.events[eventName] || new Event(eventName);
+        let event = this.events[eventName];
+        if (!event) {
+            event = new Event(eventName);
+            this.events[eventName] = event;
+        }
         event.registerCallback(func);
     }
 }

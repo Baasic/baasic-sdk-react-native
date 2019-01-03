@@ -15,7 +15,11 @@ var BaasicEventHandler = /** @class */ (function () {
         event.trigger(data);
     };
     BaasicEventHandler.prototype.addEvent = function (eventName, func) {
-        var event = this.events[eventName] || new Event(eventName);
+        var event = this.events[eventName];
+        if (!event) {
+            event = new Event(eventName);
+            this.events[eventName] = event;
+        }
         event.registerCallback(func);
     };
     return BaasicEventHandler;

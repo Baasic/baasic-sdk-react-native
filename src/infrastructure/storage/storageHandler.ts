@@ -40,7 +40,7 @@ class NativeStorageHandler implements IStorageHandler, IDefaultStorageConfig {
         }
 
         get(key: string) {
-                return this.inMemoryStorage.get(key) || "{}";
+                return this.inMemoryStorage.get(key);
         }
 
         getItemsForKeys(keys: string[]) {

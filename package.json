@@ -1,6 +1,6 @@
 {
   "name": "baasic-sdk-react-native",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react-native SDK provides core functionality for building web and mobile applications on [Baasic](http://www.baasic.com/).",
   "keywords": [
     "Baasic",

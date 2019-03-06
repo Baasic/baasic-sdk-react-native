@@ -35,7 +35,7 @@ var NativeStorageHandler = /** @class */ (function () {
             .catch(handleError);
     };
     NativeStorageHandler.prototype.get = function (key) {
-        return this.inMemoryStorage.get(key) || "{}";
+        return this.inMemoryStorage.get(key);
     };
     NativeStorageHandler.prototype.getItemsForKeys = function (keys) {
         var promises = keys.map(function (key) {
